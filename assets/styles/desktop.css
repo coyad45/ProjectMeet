@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-body{
-    margin: 6em;
-    padding: 0;
-}
+
 section{
     display: grid;
+    place-self: center;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 'meet meet liam sophia'
                         'member ethan isabella noah';
-
+    overflow: hidden;
     font-family: "Outfit", sans-serif;
     border-radius: 20px;
+    max-width: 975px;
+}
+#text{
+    position: relative;
+    z-index: 1;
 }
 h1{
     font-size: 2.5rem;
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative;
 }
 section div{
     width: auto;
@@ -30,17 +36,43 @@ section div{
 }
 #Meet{
     grid-area: meet;
+    padding: 20px 50px;
+    ;
+    position: relative;
+    background-color: #F3F4F6;
+}
+#seeMembers{
+    background-color: #F3F4F6;
     
 }
+#svgdecor{
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+#blue-text{
+    color: blue;
+}
+#seeMembers{
+    
+    display: flex;
+    align-items: end;
+    margin-bottom: 10px;
+
+}
+#seeMembers img{
+    width: 15px;
+    margin: 0 5px;
+    height: 15px;
+}
 .member{
-    background-color: blue;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: end;
     z-index: 1;
 }
-img{
+.member img{
     right: 0;
     left: 0;
     max-width: 100%;
@@ -61,4 +93,19 @@ img{
   height: 100%;
   box-shadow: inset 0px -87px 58px -46px rgba(0,0,0,0.6);
   z-index: 1; /* Asegura que la sombra esté por encima de la imagen */
+}
+.member:nth-child(2){
+    background-color: #9DC4F8;
+}
+.member:nth-child(3){
+    background-color: #EDACD2;
+}
+.member:nth-child(5){
+    background-color: #C1B6F8;
+}
+.member:nth-child(6){
+    background-color: #F8D8B0;
+}
+.member:nth-child(7){
+    background-color: #86E7D4;
 }
